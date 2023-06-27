@@ -470,3 +470,34 @@ li {
     text-align: center;
   }
 }
+
+.button-hover {
+  transition: background-color 2000ms ease
+}
+
+.button-hover:hover {
+  background-color: blue;
+  transition: background-color 200ms ease
+}
+
+.button-animated-hover:hover {
+  animation-name: button-animated-hover;
+  animation-duration: 500ms;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+@keyframes button-animated-hover {
+  0% {
+    transform: translate(0, 0);
+    background-color: red;
+  }
+  50% {
+    transform: translate(0, -20%);
+    background-color: blue;
+  }
+  100% {
+    transform: translate(0, 0);
+    background-color: yellow;
+  }
+}
